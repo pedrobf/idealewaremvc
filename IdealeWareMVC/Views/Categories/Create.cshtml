@@ -1,0 +1,40 @@
+﻿@model IdealeWareMVC.Models.Category
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>Nova Categoria</h2>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Description" class="control-label"></label>
+                <input asp-for="Description" class="form-control" />
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <input type="submit" value="Criar" class="btn btn-primary btn-block" style="color:#fdfdfd; font-size: 12pt; background-image: linear-gradient(135deg, #0091da 0%,#00aca0 100%);
+                    border-radius: 4px; border: #0091da">
+                </div>
+                <div class="form-group col-md-6">
+                    <a asp-action="Index" class="btn btn-second btn-block" style="color:#fdfdfd; font-size: 12pt; background-image: linear-gradient(135deg, #0091da 0%,#00aca0 100%);
+                    border-radius: 4px; border: #0091da"><i class="fa fa-table"></i>Listar</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

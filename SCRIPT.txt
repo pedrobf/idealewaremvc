@@ -1,0 +1,11 @@
+// 1° Passo:
+Executar a aplicação.
+
+// 2° Passo:
+Caso aja algum erro, devo a migrations do banco, abra o console NuGet.
+
+// 3° Passo:
+Digite no console: Add-Migration "Nome"
+
+// 4° Passo:
+Digite no console: Update-Database
